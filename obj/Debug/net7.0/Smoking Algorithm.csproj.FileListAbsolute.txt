@@ -1,0 +1,40 @@
+C:\Users\Arthur Wuhrlin\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\Smoking Algorithm.csproj.AssemblyReference.cache
+C:\Users\Arthur Wuhrlin\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\Smoking Algorithm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Arthur Wuhrlin\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\Smoking Algorithm.AssemblyInfoInputs.cache
+C:\Users\Arthur Wuhrlin\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\Smoking Algorithm.AssemblyInfo.cs
+C:\Users\Arthur Wuhrlin\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\Smoking Algorithm.csproj.CoreCompileInputs.cache
+C:\Users\Arthur Wuhrlin\Documents\Développement\C#\Smoking Algorithm\bin\Debug\net7.0\Smoking Algorithm.exe
+C:\Users\Arthur Wuhrlin\Documents\Développement\C#\Smoking Algorithm\bin\Debug\net7.0\Smoking Algorithm.deps.json
+C:\Users\Arthur Wuhrlin\Documents\Développement\C#\Smoking Algorithm\bin\Debug\net7.0\Smoking Algorithm.runtimeconfig.json
+C:\Users\Arthur Wuhrlin\Documents\Développement\C#\Smoking Algorithm\bin\Debug\net7.0\Smoking Algorithm.dll
+C:\Users\Arthur Wuhrlin\Documents\Développement\C#\Smoking Algorithm\bin\Debug\net7.0\Smoking Algorithm.pdb
+C:\Users\Arthur Wuhrlin\Documents\Développement\C#\Smoking Algorithm\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Arthur Wuhrlin\Documents\Développement\C#\Smoking Algorithm\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\Arthur Wuhrlin\Documents\Développement\C#\Smoking Algorithm\bin\Debug\net7.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Arthur Wuhrlin\Documents\Développement\C#\Smoking Algorithm\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+C:\Users\Arthur Wuhrlin\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\Smoking Algorithm.csproj.CopyComplete
+C:\Users\Arthur Wuhrlin\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\Smoking Algorithm.dll
+C:\Users\Arthur Wuhrlin\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\refint\Smoking Algorithm.dll
+C:\Users\Arthur Wuhrlin\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\Smoking Algorithm.pdb
+C:\Users\Arthur Wuhrlin\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\Smoking Algorithm.genruntimeconfig.cache
+C:\Users\Arthur Wuhrlin\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\ref\Smoking Algorithm.dll
+C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\bin\Debug\net7.0\Smoking Algorithm.exe
+C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\bin\Debug\net7.0\Smoking Algorithm.deps.json
+C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\bin\Debug\net7.0\Smoking Algorithm.runtimeconfig.json
+C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\bin\Debug\net7.0\Smoking Algorithm.dll
+C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\bin\Debug\net7.0\Smoking Algorithm.pdb
+C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\bin\Debug\net7.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\Smoking Algorithm.csproj.AssemblyReference.cache
+C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\Smoking Algorithm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\Smoking Algorithm.AssemblyInfoInputs.cache
+C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\Smoking Algorithm.AssemblyInfo.cs
+C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\Smoking Algorithm.csproj.CoreCompileInputs.cache
+C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\Smoking Algorithm.csproj.CopyComplete
+C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\Smoking Algorithm.dll
+C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\refint\Smoking Algorithm.dll
+C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\Smoking Algorithm.pdb
+C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\Smoking Algorithm.genruntimeconfig.cache
+C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\ref\Smoking Algorithm.dll
