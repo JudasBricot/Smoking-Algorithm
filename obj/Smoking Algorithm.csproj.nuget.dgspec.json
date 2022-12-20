@@ -42,6 +42,14 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "NReco.VideoConverter": {
+              "target": "Package",
+              "version": "[1.1.4, )"
+            },
+            "NReco.VideoConverter.LT": {
+              "target": "Package",
+              "version": "[1.1.4, )"
+            },
             "System.Drawing.Common": {
               "target": "Package",
               "version": "[7.0.0, )"

@@ -1,11 +1,24 @@
 {
   "version": 2,
-  "dgSpecHash": "L/YMYdFSy8G2YMKtKK8hx8DrT0JWqkQsc+d8TMyTwWzMdEk7lvVcCjqiqMj+OtyOyNQhRVrQ6xy2M4hVn6g+FA==",
+  "dgSpecHash": "OumVuAX51hG8k2WeNR3TDwan/MrjJyIqUDvLjVHS9+0Hk7VNlTEK0fhWzgwbyMNmi4Rx8vrSsiCsFDSTYFek3g==",
   "success": true,
   "projectFilePath": "C:\\Users\\arthu\\Documents\\Développement\\C#\\Smoking Algorithm\\Smoking Algorithm.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arthu\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\arthu\\.nuget\\packages\\nreco.videoconverter\\1.1.4\\nreco.videoconverter.1.1.4.nupkg.sha512",
+    "C:\\Users\\arthu\\.nuget\\packages\\nreco.videoconverter.lt\\1.1.4\\nreco.videoconverter.lt.1.1.4.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Le package 'NReco.VideoConverter 1.1.4' a été restauré en utilisant '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' au lieu du framework cible du projet 'net7.0'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
+      "libraryId": "NReco.VideoConverter",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

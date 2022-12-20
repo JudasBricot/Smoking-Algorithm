@@ -24,6 +24,32 @@
           }
         }
       },
+      "NReco.VideoConverter/1.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net40/NReco.VideoConverter.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net40/NReco.VideoConverter.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "NReco.VideoConverter.LT/1.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NReco.VideoConverter.LT.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NReco.VideoConverter.LT.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Drawing.Common/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -83,6 +109,35 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "NReco.VideoConverter/1.1.4": {
+      "sha512": "b501O2O3XD5/vbs3l/ZnPieXJfelluw+6dFKLbii5tgh+nXG+wOnZAiSKgJGAzqIUNWbCF1oiKBg1Kn/2BVY8Q==",
+      "type": "package",
+      "path": "nreco.videoconverter/1.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/NReco.VideoConverter.XML",
+        "lib/net40/NReco.VideoConverter.dll",
+        "nreco.videoconverter.1.1.4.nupkg.sha512",
+        "nreco.videoconverter.nuspec",
+        "readme.txt"
+      ]
+    },
+    "NReco.VideoConverter.LT/1.1.4": {
+      "sha512": "pmELr3hvLjrslOOQRrKeWNxjAHbxY/p98moFFazafKfUT7KYRU6Redgo1+GW4SDSbrB19aUd12po7eybM6ZRfg==",
+      "type": "package",
+      "path": "nreco.videoconverter.lt/1.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/NReco.VideoConverter.LT.dll",
+        "lib/net40/NReco.VideoConverter.LT.xml",
+        "lib/netstandard2.0/NReco.VideoConverter.LT.dll",
+        "lib/netstandard2.0/NReco.VideoConverter.LT.xml",
+        "nreco.videoconverter.lt.1.1.4.nupkg.sha512",
+        "nreco.videoconverter.lt.nuspec"
+      ]
+    },
     "System.Drawing.Common/7.0.0": {
       "sha512": "KIX+oBU38pxkKPxvLcLfIkOV5Ien8ReN78wro7OF5/erwcmortzeFx+iBswlh2Vz6gVne0khocQudGwaO1Ey6A==",
       "type": "package",
@@ -124,6 +179,8 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.Win32.SystemEvents >= 7.0.0",
+      "NReco.VideoConverter >= 1.1.4",
+      "NReco.VideoConverter.LT >= 1.1.4",
       "System.Drawing.Common >= 7.0.0"
     ]
   },
@@ -168,6 +225,14 @@
             "target": "Package",
             "version": "[7.0.0, )"
           },
+          "NReco.VideoConverter": {
+            "target": "Package",
+            "version": "[1.1.4, )"
+          },
+          "NReco.VideoConverter.LT": {
+            "target": "Package",
+            "version": "[1.1.4, )"
+          },
           "System.Drawing.Common": {
             "target": "Package",
             "version": "[7.0.0, )"
@@ -192,5 +257,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Le package 'NReco.VideoConverter 1.1.4' a été restauré en utilisant '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' au lieu du framework cible du projet 'net7.0'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
+      "libraryId": "NReco.VideoConverter",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

@@ -1,15 +1,34 @@
-﻿using System.Drawing;
+﻿using System.Diagnostics;
+using System.Drawing;
 using System.Drawing.Imaging;
 
 class Program
 {
-    const int WIDTH = 256;
-    const int HEIGHT = 256;
+    const int WIDTH = 1920;
+    const int HEIGHT = 1080;
 
     const int START_X = WIDTH / 2;
     const int START_Y = HEIGHT / 2;
 
-    const int PICTURE_NB = 10;
+    const int PICTURE_NB = 100;
+
+    enum ColorDiffReturnMode
+    {
+        AVERAGE,
+        MIN,
+        MAX
+    };
+    const ColorDiffReturnMode COLOR_DIFF_RETURN_MODE = ColorDiffReturnMode.MIN;
+
+    enum NeighborMode
+    {
+        SQUARE,
+        CROSS
+    };
+    const NeighborMode NEIGHBOR_MODE = NeighborMode.CROSS;
+
+    const bool CREATE_GIF = false;
+    const bool CREATE_VIDEO = true;
 
     struct Point
     {
@@ -23,26 +42,54 @@ class Program
 
     static List<Point> GetNeighborCoords(Point p)
     {
-        var neighbors = new List<Point>(8);
-        for (int dx = -1; dx <= 1; dx++)
+        List<Point> neighbors;
+        switch(NEIGHBOR_MODE)
         {
-            if(p.x + dx == -1 || p.x + dx == WIDTH)
-            {
-                continue;
-            }
+            case NeighborMode.SQUARE:
+                neighbors = new List<Point>(8);
 
-            for (int dy = -1; dy <= 1; dy++)
-            {
-                if(p.y + dy == -1 || p.y + dy == HEIGHT || dx*dx + dy*dy == 0)
+                for (int dx = -1; dx <= 1; dx++)
                 {
-                    continue;
+                    if(p.x + dx == -1 || p.x + dx == WIDTH)
+                    {
+                        continue;
+                    }
+
+                    for (int dy = -1; dy <= 1; dy++)
+                    {
+                        if(p.y + dy == -1 || p.y + dy == HEIGHT || dx*dx + dy*dy == 0)
+                        {
+                            continue;
+                        }
+
+                        neighbors.Add(new Point(p.x + dx, p.y + dy));
+                    }
                 }
 
-                neighbors.Add(new Point(p.x + dx, p.y + dy));
-            }
-        }
+                return neighbors;
 
-        return neighbors;
+            case NeighborMode.CROSS:
+
+                neighbors = new List<Point>(4);
+
+                if(p.x != 0)
+                {
+                    neighbors.Add(new Point(p.x - 1, p.y));
+                }
+                if(p.x != WIDTH-1)
+                {
+                    neighbors.Add(new Point(p.x + 1, p.y));
+                }
+                if(p.y != 0)
+                {
+                    neighbors.Add(new Point(p.x, p.y - 1));
+                }
+                if(p.y != HEIGHT-1)
+                {
+                    neighbors.Add(new Point(p.x, p.y + 1));
+                }
+                return neighbors;
+        }
     }
 
     static int ColDiff(Color c1, Color c2)
@@ -65,7 +112,15 @@ class Program
             }
         }
 
-        return diffs.Min();
+        switch(COLOR_DIFF_RETURN_MODE)
+        {
+            case ColorDiffReturnMode.AVERAGE:
+                return (int)diffs.Average();
+            case ColorDiffReturnMode.MIN:
+                return diffs.Min();
+            case ColorDiffReturnMode.MAX:
+                return diffs.Max();
+        }
     }
 
     static Random rng = new Random();  
@@ -82,11 +137,31 @@ class Program
         }  
     }
 
+    public static void CreateVideo()
+    {
+        ProcessStartInfo startInfo = new ProcessStartInfo();
+        startInfo.FileName = "ffmpeg";
+
+        startInfo.Arguments = "-r 24 -f image2 -s 1920x1080 -i ./Pics/pic%03d.png -vcodec libx264 -crf 25  -pix_fmt yuv420p test.mp4";
+
+        Process process = new Process();
+        process.StartInfo = startInfo;
+        process.Start();
+
+        process.WaitForExit();
+    }
+
     public static void Main(String[] args)
     {
+        Stopwatch sw = new Stopwatch();
+
+
         Bitmap bitmap = new Bitmap(WIDTH, HEIGHT, PixelFormat.Format24bppRgb);
         Color[,] pixels = new Color[WIDTH, HEIGHT];
+
         HashSet<Point> available = new HashSet<Point>();
+
+        GifWriter gifWriter = new GifWriter("Pics/result.gif", 100);
 
         // Initalisation de la liste des couleurs disponibles
         List<Color> availableCol = new List<Color>();
@@ -98,12 +173,22 @@ class Program
         // Tri de la liste des couleurs
         availableCol.Sort((c1,c2) => c1.GetHue().CompareTo(c2.GetHue()));
 
-        for (int i = 0; i < WIDTH*HEIGHT; i++)
+        // Permet de randomiser la première valeur de i pour avoir des couleurs random.
+        int rndStart = rng.Next(256*256*256 - WIDTH*HEIGHT);
+
+        // Compteur d'image
+        int imgNb = 0;
+        int imgInterval = WIDTH * HEIGHT / PICTURE_NB;
+
+        // Initialisation timer
+        sw.Start();
+        float lastMilliseconds = 0;
+
+        for (int i = rndStart; i < WIDTH*HEIGHT + rndStart; i++)
         {
             Color selectedColor = availableCol[i];
             Point bestPointForColor;
-
-            if(available.Count == 0)
+            if(i == rndStart)
             {
                 bestPointForColor = new Point(START_X, START_Y);
             }
@@ -116,7 +201,7 @@ class Program
             pixels[bestPointForColor.x, bestPointForColor.y] = selectedColor;
             bitmap.SetPixel(bestPointForColor.x, bestPointForColor.y, selectedColor);
 
-            // On enlève ce point de spoints à traiter
+            // On enlève ce point des points à traiter
             available.Remove(bestPointForColor);
 
             // On ajoute les voisins à la queue
@@ -130,15 +215,38 @@ class Program
 
             if(i % WIDTH == 0)
             {
-                Console.WriteLine("Advancement : " + i * 1.0 / (HEIGHT*WIDTH));
+                Console.WriteLine("Advancement : " + (i-rndStart) * 1.0 / (HEIGHT*WIDTH));
+                float deltaTime = lastMilliseconds - sw.ElapsedMilliseconds;
+                lastMilliseconds = sw.ElapsedMilliseconds;
+                Console.WriteLine("Time Remaining : " + deltaTime * (HEIGHT - i / WIDTH) / 1000 + "s");
+                Console.WriteLine("To process points : " + available.Count);
             }
 
-            if(i % ((WIDTH * HEIGHT) / PICTURE_NB) == 0)
+            if(i % imgInterval == 0)
             {
-                bitmap.Save("Picture n°" + i / ((WIDTH * HEIGHT) / PICTURE_NB) + ".jpg");
+                bitmap.Save("Pics/pic" + imgNb.ToString().PadLeft (3, '0') + ".png");
+                imgNb++;
+
+                if(CREATE_GIF)
+                {
+                    gifWriter.WriteFrame(bitmap);
+                }
             }
         }
 
-        bitmap.Save("Result.jpg");
+        bitmap.Save("Pics/Picture n°" + PICTURE_NB.ToString().PadLeft (3, '0') + ".png");
+        
+        if(CREATE_GIF)
+        {
+            gifWriter.WriteFrame(bitmap);
+            gifWriter.Dispose();
+        }
+
+        if(CREATE_VIDEO)
+        {
+            CreateVideo();
+        }
+
+        sw.Stop();
     }
 }

@@ -9,6 +9,8 @@
       "Smoking Algorithm/1.0.0": {
         "dependencies": {
           "Microsoft.Win32.SystemEvents": "7.0.0",
+          "NReco.VideoConverter": "1.1.4",
+          "NReco.VideoConverter.LT": "1.1.4",
           "System.Drawing.Common": "7.0.0"
         },
         "runtime": {
@@ -28,6 +30,22 @@
             "assetType": "runtime",
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.0.22.51805"
+          }
+        }
+      },
+      "NReco.VideoConverter/1.1.4": {
+        "runtime": {
+          "lib/net40/NReco.VideoConverter.dll": {
+            "assemblyVersion": "1.1.4.0",
+            "fileVersion": "1.1.4.0"
+          }
+        }
+      },
+      "NReco.VideoConverter.LT/1.1.4": {
+        "runtime": {
+          "lib/netstandard2.0/NReco.VideoConverter.LT.dll": {
+            "assemblyVersion": "1.1.3.0",
+            "fileVersion": "1.1.3.0"
           }
         }
       },
@@ -64,6 +82,20 @@
       "sha512": "sha512-2nXPrhdAyAzir0gLl8Yy8S5Mnm/uBSQQA7jEsILOS1MTyS7DbmV1NgViMtvV1sfCD1ebITpNwb1NIinKeJgUVQ==",
       "path": "microsoft.win32.systemevents/7.0.0",
       "hashPath": "microsoft.win32.systemevents.7.0.0.nupkg.sha512"
+    },
+    "NReco.VideoConverter/1.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-b501O2O3XD5/vbs3l/ZnPieXJfelluw+6dFKLbii5tgh+nXG+wOnZAiSKgJGAzqIUNWbCF1oiKBg1Kn/2BVY8Q==",
+      "path": "nreco.videoconverter/1.1.4",
+      "hashPath": "nreco.videoconverter.1.1.4.nupkg.sha512"
+    },
+    "NReco.VideoConverter.LT/1.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pmELr3hvLjrslOOQRrKeWNxjAHbxY/p98moFFazafKfUT7KYRU6Redgo1+GW4SDSbrB19aUd12po7eybM6ZRfg==",
+      "path": "nreco.videoconverter.lt/1.1.4",
+      "hashPath": "nreco.videoconverter.lt.1.1.4.nupkg.sha512"
     },
     "System.Drawing.Common/7.0.0": {
       "type": "package",
