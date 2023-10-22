@@ -1,6 +1,12 @@
+# Dotnet project
 *.suo
 *.user
 _ReSharper.*
 bin
 obj
 packages
+
+# Temporary images
+media/Old
+media/Pics
+media/Video
