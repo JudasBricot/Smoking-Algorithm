@@ -4,8 +4,8 @@ using System.Drawing.Imaging;
 
 class Program
 {
-    const int WIDTH = 1920;
-    const int HEIGHT = 1080;
+    const int WIDTH = 100;
+    const int HEIGHT = 100;
 
     const int START_X = WIDTH / 2;
     const int START_Y = HEIGHT / 2;
@@ -142,7 +142,7 @@ class Program
         ProcessStartInfo startInfo = new ProcessStartInfo();
         startInfo.FileName = "ffmpeg";
 
-        startInfo.Arguments = "-r 24 -f image2 -s 1920x1080 -i ./Pics/pic%03d.png -vcodec libx264 -crf 25  -pix_fmt yuv420p test.mp4";
+        startInfo.Arguments = "-r 24 -f image2 -s " + WIDTH + "x" + HEIGHT + " -i ./media/Pics/pic%03d.png -vcodec libx264 -crf 25  -pix_fmt yuv420p media/Video/test.mp4";
 
         Process process = new Process();
         process.StartInfo = startInfo;
@@ -155,13 +155,12 @@ class Program
     {
         Stopwatch sw = new Stopwatch();
 
-
         Bitmap bitmap = new Bitmap(WIDTH, HEIGHT, PixelFormat.Format24bppRgb);
         Color[,] pixels = new Color[WIDTH, HEIGHT];
 
         HashSet<Point> available = new HashSet<Point>();
 
-        GifWriter gifWriter = new GifWriter("Pics/result.gif", 100);
+        GifWriter gifWriter = new GifWriter("media/Pics/result.gif", 100);
 
         // Initalisation de la liste des couleurs disponibles
         List<Color> availableCol = new List<Color>();
@@ -224,7 +223,7 @@ class Program
 
             if(i % imgInterval == 0)
             {
-                bitmap.Save("Pics/pic" + imgNb.ToString().PadLeft (3, '0') + ".png");
+                bitmap.Save("media/Pics/pic" + imgNb.ToString().PadLeft (3, '0') + ".png");
                 imgNb++;
 
                 if(CREATE_GIF)
@@ -234,7 +233,7 @@ class Program
             }
         }
 
-        bitmap.Save("Pics/Picture n°" + PICTURE_NB.ToString().PadLeft (3, '0') + ".png");
+        bitmap.Save("media/Pics/Picture" + PICTURE_NB.ToString().PadLeft (3, '0') + ".png");
         
         if(CREATE_GIF)
         {

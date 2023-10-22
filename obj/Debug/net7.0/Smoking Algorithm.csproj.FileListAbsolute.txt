@@ -40,3 +40,23 @@ C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\Sm
 C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\obj\Debug\net7.0\ref\Smoking Algorithm.dll
 C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\bin\Debug\net7.0\NReco.VideoConverter.dll
 C:\Users\arthu\Documents\Développement\C#\Smoking Algorithm\bin\Debug\net7.0\NReco.VideoConverter.LT.dll
+D:\Dev\C#\Smoking-Algorithm\bin\Debug\net7.0\Smoking Algorithm.exe
+D:\Dev\C#\Smoking-Algorithm\bin\Debug\net7.0\Smoking Algorithm.deps.json
+D:\Dev\C#\Smoking-Algorithm\bin\Debug\net7.0\Smoking Algorithm.runtimeconfig.json
+D:\Dev\C#\Smoking-Algorithm\bin\Debug\net7.0\Smoking Algorithm.dll
+D:\Dev\C#\Smoking-Algorithm\bin\Debug\net7.0\Smoking Algorithm.pdb
+D:\Dev\C#\Smoking-Algorithm\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\Dev\C#\Smoking-Algorithm\bin\Debug\net7.0\System.Drawing.Common.dll
+D:\Dev\C#\Smoking-Algorithm\bin\Debug\net7.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\Dev\C#\Smoking-Algorithm\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+D:\Dev\C#\Smoking-Algorithm\obj\Debug\net7.0\Smoking Algorithm.csproj.AssemblyReference.cache
+D:\Dev\C#\Smoking-Algorithm\obj\Debug\net7.0\Smoking Algorithm.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\C#\Smoking-Algorithm\obj\Debug\net7.0\Smoking Algorithm.AssemblyInfoInputs.cache
+D:\Dev\C#\Smoking-Algorithm\obj\Debug\net7.0\Smoking Algorithm.AssemblyInfo.cs
+D:\Dev\C#\Smoking-Algorithm\obj\Debug\net7.0\Smoking Algorithm.csproj.CoreCompileInputs.cache
+D:\Dev\C#\Smoking-Algorithm\obj\Debug\net7.0\Smoking Algorithm.csproj.CopyComplete
+D:\Dev\C#\Smoking-Algorithm\obj\Debug\net7.0\Smoking Algorithm.dll
+D:\Dev\C#\Smoking-Algorithm\obj\Debug\net7.0\refint\Smoking Algorithm.dll
+D:\Dev\C#\Smoking-Algorithm\obj\Debug\net7.0\Smoking Algorithm.pdb
+D:\Dev\C#\Smoking-Algorithm\obj\Debug\net7.0\Smoking Algorithm.genruntimeconfig.cache
+D:\Dev\C#\Smoking-Algorithm\obj\Debug\net7.0\ref\Smoking Algorithm.dll
