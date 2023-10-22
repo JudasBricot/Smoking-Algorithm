@@ -16,10 +16,8 @@ At each step, we pick the first color of the color list, we remove it from the l
 Here are some results where the color are sorted by Hue, and the start point is the center of the image :
 ## "Lemon"
 ![Screenshot](media/results/Lemon.jpg)
-![til](media/results/Lemon.gif)
 ## "Plants"
 ![Screenshot](media/results/Plants.png)
 ![til](media/results/Plants.gif)
 ## "Red"
 ![Screenshot](media/results/Red.jpg)
-![til](media/results/Red.gif)

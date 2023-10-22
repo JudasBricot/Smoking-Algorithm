@@ -27,7 +27,7 @@ class Program
     };
     const NeighborMode NEIGHBOR_MODE = NeighborMode.CROSS;
 
-    const bool CREATE_GIF = false;
+    const bool CREATE_GIF = true;
     const bool CREATE_VIDEO = true;
 
     struct Point
